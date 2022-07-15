@@ -3,4 +3,5 @@ str_len = len(user_input)
 reversed = " "
 for i in range(str_len):
     reversed = user_input[i] + reversed
-print(reversed)
+print("Input :",user_input)
+print("Output :",reversed)
