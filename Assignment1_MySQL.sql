@@ -63,7 +63,7 @@ SELECT * FROM Orders;
 
 SELECT COUNT(*) FROM SalesPeople WHERE Sname LIKE 'a%' or Sname LIKE 'A%';
 
-SELECT DISTINCT(Sname) FROM SalesPeople s INNER JOIN Orders o ON s.Snum = o.Snum WHERE o.Amt > 2000;
+SELECT DISTINCT(Sname), o.Amt FROM SalesPeople s INNER JOIN Orders o ON s.Snum = o.Snum WHERE o.Amt > 2000;
 
 SELECT COUNT(DISTINCT(Sname)) FROM SalesPeople WHERE City = 'Newyork';
 
