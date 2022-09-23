@@ -69,4 +69,4 @@ SELECT COUNT(DISTINCT(Sname)) FROM SalesPeople WHERE City = 'Newyork';
 
 SELECT COUNT(DISTINCT(Sname)) FROM SalesPeople WHERE City = 'London'  or City = 'Paris';
 
-SELECT  COUNT(Orders.Onum) , Orders.Odate, SalesPeople.Sname FROM Orders INNER JOIN SalesPeople WHERE Orders.Snum = SalesPeople.Snum GROUP BY Orders.Snum;
+SELECT  SalesPeople.Sname, Orders.Odate ,COUNT(*) as Number_of_Orders  FROM SalesPeople,Orders WHERE  SalesPeople.Snum= Orders.Snum  GROUP BY SalesPeople.Sname, Orders.Odate;
